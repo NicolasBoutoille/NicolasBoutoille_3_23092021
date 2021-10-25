@@ -1,0 +1,19 @@
+{
+  "name": "nicolasboutoille_3_23092021",
+  "version": "1.0.0",
+  "description": "NicolasBoutoille_3_23092021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasBoutoille/NicolasBoutoille_3_23092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasBoutoille/NicolasBoutoille_3_23092021/issues"
+  },
+  "homepage": "https://github.com/NicolasBoutoille/NicolasBoutoille_3_23092021#readme"
+}
