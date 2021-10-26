@@ -1,0 +1,23 @@
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 2rem 3.2rem;
+    & h1{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    & p{
+        text-align: center;
+        font-weight: 300;
+        color: #353535;
+    }
+
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+}
