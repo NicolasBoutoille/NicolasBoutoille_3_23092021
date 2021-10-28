@@ -1,7 +1,14 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./base/reset";
 @import "./base/typography";
 @import "./layouts/_mainheader";
 @import "./layouts/explore";
+@import "./layouts/functioning";
+@import "./layouts/restaurants";
 @import "./components/form";
 @import "./components/button.scss";
+@import "./components/button2";
+@import "./components/card";
+@import "./components/button-like";

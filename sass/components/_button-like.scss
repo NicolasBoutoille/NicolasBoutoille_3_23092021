@@ -1,0 +1,33 @@
+.button-like{
+    font-size: 1.6rem;
+    font-weight: bold;
+    z-index: 1;
+    & .far{
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+    }
+    & .fas{
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        color: transparent;
+        z-index: -1;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.5s ease-in;
+    }
+    &:hover{
+        & .fas{
+            transform: scale(1);
+            opacity: 1;
+        }
+        & .far{
+            background: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}

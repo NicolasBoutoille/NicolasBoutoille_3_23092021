@@ -1,0 +1,43 @@
+.button2{
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 4rem;
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    transition: background-color 200ms;
+    position: relative;
+    & span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        left: -12px;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 0.75rem;
+        font-size: 0.8rem;
+    }
+    & i{
+        height: 1rem;
+        width: 1rem;
+        margin: auto 1rem auto;
+        color: lighten(black, 50%);
+    }
+    & p{
+        margin: auto 2rem auto 0.5rem;
+        font-weight: 500;
+    }
+    &:hover{
+        background-color: lighten($color-primary, 35%);
+        & i{
+            color: $color-primary;
+        }
+    }
+}
