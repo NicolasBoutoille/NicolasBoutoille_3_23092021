@@ -411,10 +411,63 @@ a {
 .restaurants__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 992px) {
   .restaurants__container {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants h2 {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+  }
+}
+
+footer {
+  background-color: #363636;
+  color: white;
+  padding: 2rem;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    padding: 1rem;
+  }
+}
+footer h4 {
+  margin: 0;
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 992px) {
+  footer h4 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
+footer i {
+  height: 15px;
+  width: 15px;
+  margin-right: 0.5rem;
+}
+footer a {
+  color: white;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 992px) {
+  footer .footer-content {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 
@@ -455,7 +508,7 @@ a {
 .button2 {
   display: flex;
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   height: 4rem;
   background-color: #f6f6f6;
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
@@ -499,10 +552,10 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
-  max-width: 350px;
+  width: 100%;
   height: 250px;
-  margin: 2rem 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
@@ -531,6 +584,16 @@ a {
   padding: 0.3rem;
   border-radius: 3px;
 }
+.card:hover {
+  box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 992px) {
+  .card {
+    min-width: 450px;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+}
 
 .button-like {
   font-size: 1.6rem;
@@ -546,20 +609,34 @@ a {
   position: absolute;
   bottom: 25px;
   right: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-image: -o-linear-gradient(#9356DC, #FF79DA);
   background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   z-index: -1;
   opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
-  transition: transform 0.5s ease-in;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in, -webkit-transform 0.4s ease-in;
 }
 .button-like:hover .fas {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1;
 }
 .button-like:hover .far {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: -o-linear-gradient(#9356DC, #FF79DA);
   background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }

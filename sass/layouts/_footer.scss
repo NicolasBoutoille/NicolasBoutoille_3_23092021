@@ -1,0 +1,32 @@
+footer{
+    background-color: lighten(#000,21%);
+    color: white;
+    padding: 2rem;
+    @include desktop{
+        padding: 1rem;
+    }
+    & h4{
+        margin: 0;
+        font-family: Shrikhand, sans-serif;
+        font-size: 1.1rem;
+        @include desktop{
+            text-align: center;
+            margin: 1rem 0;
+        }
+    }
+    & i{
+        height: 15px;
+        width: 15px;
+        margin-right: 0.5rem;
+    }
+    & a{
+        color: white;
+        margin: 1rem 0;
+    }
+    .footer-content{
+        @include desktop{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
