@@ -14,6 +14,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--Loading spinner-->
+        <div class="loading-spinner">
+            <div class="bouncer">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <!-- Header -->
         <header class="main-header">
             <img src="public/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood!"/>
@@ -30,7 +39,7 @@
             <section class="explore">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <a href="#" class="button">Explorer nos restaurants</a>
+                <a href="#restaurants" class="button">Explorer nos restaurants</a>
             </section>
 
             <!--Functioning-->
@@ -56,10 +65,10 @@
             </section>
 
             <!--Restaurants-->
-            <section class="restaurants">
+            <section class="restaurants" id="restaurants">
                 <h2>Restaurants</h2>
                 <div class="restaurants__container">
-                    <a href="#" class="card">
+                    <a href="la-palette-du-gout.html" class="card">
                         <img src="public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût"/>
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>

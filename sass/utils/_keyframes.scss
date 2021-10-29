@@ -1,0 +1,19 @@
+@keyframes loader-end{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes bouncer{
+    from{
+        transform: translatey(0);
+    }
+    to{
+        transform: translatey(-50px);
+    }
+}
+
