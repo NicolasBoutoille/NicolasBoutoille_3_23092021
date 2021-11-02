@@ -1,22 +1,29 @@
 .menu{
-    width: 100%;
-    background-color: darken(#fff,3%);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    margin-top: -45px;
-    padding: 1rem 0;
-    & h2{
-        font-family: Shrikhand, sans-serif;
-        margin-left: 1rem;
-    }
+    background-color: #f6f6f6;
+    padding: 1rem;
+    margin-top: -50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     & h3{
-        margin-left: 1rem;
+        font-family: Shrikhand, sans-serif;
+        font-size: 1.5rem;
+    }
+    & h4{
+        font-weight: 200;
         text-transform: uppercase;
-        font-weight: 300;
-        font-size: 1rem;
-        
-        & span{
-            border-bottom: 3px solid $color-tertiary;
-        }
+        margin-top: 1.8rem;
+    }
+    &__border{
+        border-bottom: 3px solid $color-tertiary;
+    }
+    &__container{
+        animation: loading 1s linear forwards;
+    }
+    & .button{
+        color: white;
+        display: flex;
+        justify-content: center;
+        margin: 2.5rem auto;
+        width: 180px;
     }
 }
