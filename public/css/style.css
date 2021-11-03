@@ -18,7 +18,7 @@
 @keyframes loading {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
   to {
     opacity: 100;
@@ -370,6 +370,8 @@ template {
 
 body {
   font-family: Roboto, sans-serif;
+  max-width: 1920px;
+  margin: auto;
 }
 
 a {
@@ -457,7 +459,7 @@ a {
 @media screen and (min-width: 992px) {
   .restaurants h2 {
     margin-bottom: 2rem;
-    margin-left: 3rem;
+    text-align: center;
   }
 }
 
@@ -509,16 +511,63 @@ footer a {
   font-family: Shrikhand, sans-serif;
   font-size: 1.5rem;
 }
-.menu h4 {
+@media screen and (min-width: 992px) {
+  .menu h3 {
+    text-align: center;
+  }
+}
+.menu__title {
   font-weight: 200;
   text-transform: uppercase;
   margin-top: 1.8rem;
 }
-.menu__border {
-  border-bottom: 3px solid #99E2D0;
+.menu__title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #99E2D0;
+  margin-top: 0.5rem;
 }
-.menu__container {
-  animation: loading 1s linear forwards;
+@media screen and (min-width: 992px) {
+  .menu__title::after {
+    margin: 0.5rem auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__title {
+    text-align: center;
+  }
+}
+.menu__starter {
+  animation: loading 0.8s linear forwards;
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__starter {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.menu__dish {
+  animation: loading 0.8s linear 0.25s forwards;
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__dish {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.menu__dessert {
+  animation: loading 0.8s linear 0.5s forwards;
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__dessert {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .menu .button {
   color: white;
@@ -590,8 +639,6 @@ footer a {
   font-size: 0.8rem;
 }
 .button2 i {
-  height: 1rem;
-  width: 1rem;
   margin: auto 1rem auto;
   color: gray;
 }
@@ -714,80 +761,84 @@ img.illustration {
   object-fit: cover;
 }
 
-.card-food {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
+.food {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 1rem;
   box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.1);
-  max-width: 650px;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+}
+@media screen and (min-width: 992px) {
+  .food {
+    width: 350px;
+  }
+}
+.food__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.7rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.card-food h5 {
+.food__container--name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.food__container--name h5 {
   margin: 0;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.card-food p {
+.food__container--name p {
   margin: 0;
   font-weight: 200;
-  font-size: 0.9rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.95rem;
 }
-.card-food span {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
+.food__container span {
+  align-self: flex-end;
+  margin: 0 0.5rem;
+  font-weight: 500;
 }
-.card-food:hover .button-check {
-  transform: scaleX(1);
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
+.food:hover .button-check {
+  width: 75px;
 }
-.card-food:hover .fas {
+.food:hover .fas {
   transform: rotate(0turn);
-  -webkit-transform: rotate(0turn);
-  -ms-transform: rotate(0turn);
 }
 
 .button-check {
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 100%;
-  width: 60px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  color: white;
   font-size: 1.5rem;
   background-color: #99E2D0;
-  color: white;
-  transform: scaleX(0);
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform-origin: 100% 50%;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  height: 100%;
+  width: 0;
+  transition: all 1s;
 }
 .button-check .fas {
   transform: rotate(-360deg);
-  -webkit-transform: rotate(-360deg);
-  -ms-transform: rotate(-360deg);
-  transition: transform 0.5s ease-in-out;
-  -webkit-transition: transform 0.5s ease-in-out;
-  -o-transition: transform 0.5s ease-in-out;
+  transition: all 0.8s;
 }
 
 .loading-spinner {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   background-color: #fff;
   height: 100%;

@@ -7,17 +7,52 @@
     & h3{
         font-family: Shrikhand, sans-serif;
         font-size: 1.5rem;
+        @include desktop{
+            text-align: center;
+        }
     }
-    & h4{
+    &__title{
         font-weight: 200;
         text-transform: uppercase;
         margin-top: 1.8rem;
+        &::after{
+            content:"";
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: $color-tertiary;
+            margin-top: 0.5rem;
+            @include desktop{
+                margin: 0.5rem auto;
+            }
+        }
+        @include desktop{
+            text-align: center;
+        }
     }
-    &__border{
-        border-bottom: 3px solid $color-tertiary;
+    &__starter{
+        animation: loading 0.8s linear forwards;
+        opacity: 0;
+        @include desktop{
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
-    &__container{
-        animation: loading 1s linear forwards;
+    &__dish{
+        animation: loading 0.8s linear 0.25s forwards;
+        opacity: 0;
+        @include desktop{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &__dessert{
+        animation: loading 0.8s linear 0.5s forwards;
+        opacity: 0;
+        @include desktop{
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
     & .button{
         color: white;
