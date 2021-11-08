@@ -547,6 +547,7 @@ footer a {
   .menu__starter {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
 .menu__dish {
@@ -695,7 +696,7 @@ footer a {
   .card {
     min-width: 450px;
     max-width: 600px;
-    margin-bottom: 3rem;
+    margin: 0 2rem 3rem;
   }
 }
 
