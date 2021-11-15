@@ -540,7 +540,7 @@ footer a {
   }
 }
 .menu__starter {
-  animation: loading 0.8s linear forwards;
+  animation: loading 1.2s linear forwards;
   opacity: 0;
 }
 @media screen and (min-width: 992px) {
@@ -551,7 +551,7 @@ footer a {
   }
 }
 .menu__dish {
-  animation: loading 0.8s linear 0.25s forwards;
+  animation: loading 1.2s linear 0.25s forwards;
   opacity: 0;
 }
 @media screen and (min-width: 992px) {
@@ -561,7 +561,7 @@ footer a {
   }
 }
 .menu__dessert {
-  animation: loading 0.8s linear 0.5s forwards;
+  animation: loading 1.2s linear 0.5s forwards;
   opacity: 0;
 }
 @media screen and (min-width: 992px) {
@@ -726,7 +726,7 @@ footer a {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
   transition: -webkit-transform 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;

@@ -31,7 +31,7 @@
         }
     }
     &__starter{
-        animation: loading 0.8s linear forwards;
+        animation: loading 1.2s linear forwards;
         opacity: 0;
         @include desktop{
             display: flex;
@@ -40,7 +40,7 @@
         }
     }
     &__dish{
-        animation: loading 0.8s linear 0.25s forwards;
+        animation: loading 1.2s linear 0.25s forwards;
         opacity: 0;
         @include desktop{
             display: flex;
@@ -48,7 +48,7 @@
         }
     }
     &__dessert{
-        animation: loading 0.8s linear 0.5s forwards;
+        animation: loading 1.2s linear 0.5s forwards;
         opacity: 0;
         @include desktop{
             display: flex;
